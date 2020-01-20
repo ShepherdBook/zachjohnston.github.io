@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Debugging is harder when you make assumptions"
+author: "Zach Johnston"
 ---
 
 We received a support ticket complaining that a certain web app was not loading.  When we checked, it was loading intermittently but very slowly, indicating a timeout of a slow-running SQL query.  Once we identifed the query (located within a stored procedure), we unplugged the slow query by returning an empty set.  This allowed the web app to run, albeit without the data from this query.  This gave us time to examine it in detail.
